@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Luas Bangun Datar</title>
+</head>
+<body>
+    <h2>Menghitung Luas Bangun Datar</h2>
+
+    <!-- Input untuk Persegi Panjang -->
+    <h3>Persegi Panjang</h3>
+    <label>Panjang: <input type="number" id="panjang"></label>
+    <label>Lebar: <input type="number" id="lebar"></label>
+    <button onclick="hitungPersegiPanjang()">Hitung</button>
+    <p id="hasilPersegiPanjang"></p>
+
+    <!-- Input untuk Bujur Sangkar -->
+    <h3>Bujur Sangkar</h3>
+    <label>Sisi: <input type="number" id="sisi"></label>
+    <button onclick="hitungBujurSangkar()">Hitung</button>
+    <p id="hasilBujurSangkar"></p>
+
+    <!-- Input untuk Segitiga -->
+    <h3>Segitiga</h3>
+    <label>Alas: <input type="number" id="alas"></label>
+    <label>Tinggi: <input type="number" id="tinggi"></label>
+    <button onclick="hitungSegitiga()">Hitung</button>
+    <p id="hasilSegitiga"></p>
+
+    <script>
+        // Fungsi untuk menghitung luas persegi panjang
+        function hitungPersegiPanjang() {
+            let panjang = document.getElementById("panjang").value;
+            let lebar = document.getElementById("lebar").value;
+            let luas = panjang * lebar;
+            document.getElementById("hasilPersegiPanjang").innerText = "Luas: " + luas;
+        }
+
+        // Fungsi untuk menghitung luas bujur sangkar
+        function hitungBujurSangkar() {
+            let sisi = document.getElementById("sisi").value;
+            let luas = sisi * sisi;
+            document.getElementById("hasilBujurSangkar").innerText = "Luas: " + luas;
+        }
+
+        // Fungsi untuk menghitung luas segitiga
+        function hitungSegitiga() {
+            let alas = document.getElementById("alas").value;
+            let tinggi = document.getElementById("tinggi").value;
+            let luas = (alas * tinggi) / 2;
+            document.getElementById("hasilSegitiga").innerText = "Luas: " + luas;
+        }
+    </script>
+</body>
+</html>
